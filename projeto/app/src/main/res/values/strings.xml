@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">TelaLoginFS</string>
+    <string name="app_name">FOODSOCIAL</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="usuario_login">Usuário</string>
+    <string name="nome">Nome</string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="senha_login">Senha</string>
+    <string name="food_social">FOODSOCIAL</string>
+    <string name="faca_login">Faça login</string>
+    <string name="ja_possui_conta">Já possui conta?</string>
+    <string name="usuario_cadastro">Usuário</string>
+    <string name="senha_cadastro">Senha</string>
+    <string name="login">Login</string>
+    <string name="foodsocial">FOODSOCIAL</string>
+    <string name="cadastre_se">Cadastre-se.</string>
+    <string name="nao_possui_conta">Não possui conta?</string>
+    <string name="titulo_publicacao">Título</string>
+    <string name="ingredientes_publicacao">Ingredientes</string>
+    <string name="modo_preparo_publicacao">Modo de preparo</string>
+
+
+    <string name="app_name1">Spinner Example</string>
+    <string-array name="numbers">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
 </resources>

@@ -17,13 +17,11 @@ public class UsuarioController {
     }
 
     @PostMapping("/login")
-    public boolean fazLogin(@RequestBody FormularioLogin formularioLogin){
+    public Usuario fazLogin(@RequestBody FormularioLogin formularioLogin){
         String username,senha;
         username = formularioLogin.getUsername();
         senha = formularioLogin.getSenha();
 
         return service.fazLogin(username,senha);
     }
-
-
 }

@@ -13,8 +13,8 @@ public class UsuarioService {
         return usuarioRepository.findById(idUsuario).get();
     }
 
-    public boolean fazLogin(String username, String senha){
-        return usuarioRepository.fazLogin(username,senha) == 1 ? true:false ;
+    public Usuario fazLogin(String username, String senha){
+        return usuarioRepository.fazLogin(username,senha);
     }
 
 }
