@@ -1,3 +1,11 @@
+/************** Participantes do projeto **************
+*Nome:                                              RA
+* Breno Vieira Castanho                             00096335
+* Danilo de Sousa Nogueira                          00096122
+* José Vitor Alves Pignataro                        00096150
+* Kevin Lopes Paschoal                              00097685
+* Reinaldo de Araújo Sandim Neto                    00096475
+* */
 package com.uniso.lpdm.foodsocial;
 
 import androidx.appcompat.app.AppCompatActivity;
