@@ -6,30 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+public class TelaFeedPublicacao extends AppCompatActivity {
 
-public class TelaPublicacao extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_publicacao);
+        setContentView(R.layout.activity_tela_feed_publicacao);
         getSupportActionBar().hide();
     }
 
 
-    public void IrPerfil(View view){
-        Intent intent = new Intent(this,TelaPerfil.class);
-        startActivity(intent);
-    }
-
-    public void IrFeedPublicacao(View view){
-        Intent intent = new Intent(this,TelaFeedPublicacao.class);
-        startActivity(intent);
-    }
 
     public void IrPublicacao(View view) {
         Intent intent = new Intent(this,TelaPublicacao.class);
         startActivity(intent);
     }
-
+    public void IrPerfil(View view){
+        Intent intent = new Intent(this,TelaPerfil.class);
+        startActivity(intent);
+    }
 
 }

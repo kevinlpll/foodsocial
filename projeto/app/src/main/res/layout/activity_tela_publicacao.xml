@@ -77,18 +77,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.675" />
 
-<!--    <Spinner-->
-<!--        android:id="@+id/spinner1"-->
-<!--        android:layout_width="166dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:entries=" "-->
-<!--        android:spinnerMode="dropdown"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.053"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.836" />-->
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spinner1"-->
+    <!--        android:layout_width="166dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:entries=" "-->
+    <!--        android:spinnerMode="dropdown"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.053"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.836" />-->
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
@@ -141,7 +141,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="#80000000" />
+        app:tint="#80000000"
+        android:clickable="true"
+        android:onClick="IrFeedPublicacao"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -154,7 +156,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964"
-        app:tint="#80000000" />
+        app:tint="#80000000"
+        android:clickable="true"
+        android:onClick="IrPerfil"/>
 
     <ImageView
         android:id="@+id/imageView8"

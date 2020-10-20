@@ -64,7 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logofs" />
+        app:srcCompat="@drawable/logofs"
+        android:onClick="Irfeed"/>
 
     <TextView
         android:id="@+id/textView"
@@ -106,6 +107,6 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="irCadastro"
-         />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

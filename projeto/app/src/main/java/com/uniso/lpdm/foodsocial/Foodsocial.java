@@ -1,11 +1,12 @@
 /************** Participantes do projeto **************
-*Nome:                                              RA
-* Breno Vieira Castanho                             00096335
-* Danilo de Sousa Nogueira                          00096122
-* José Vitor Alves Pignataro                        00096150
-* Kevin Lopes Paschoal                              00097685
-* Reinaldo de Araújo Sandim Neto                    00096475
-* */
+ *Nome:                                              RA
+ * Breno Vieira Castanho                             00096335
+ * Danilo de Sousa Nogueira                          00096122
+ * José Vitor Alves Pignataro                        00096150
+ * Kevin Lopes Paschoal                              00097685
+ * Reinaldo de Araújo Sandim Neto                    00096475
+ * Lauro isaac lepinsky                             00096279
+ * */
 package com.uniso.lpdm.foodsocial;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +31,7 @@ public class Foodsocial extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().hide();
         final TextView link_cadastrar = findViewById(R.id.link_cadastrar);
         final EditText username = findViewById(R.id.username);
         final EditText senha = findViewById(R.id.password);
@@ -80,10 +81,10 @@ public class Foodsocial extends AppCompatActivity {
         Intent intent = new Intent(this,TelaCadastro.class);
         startActivity(intent);
     }
-
-
-
-
+    public void Irfeed(View view) {
+        Intent intent = new Intent(this,TelaFeedPublicacao.class);
+        startActivity(intent);
+    }
 
 
 }

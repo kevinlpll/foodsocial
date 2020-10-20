@@ -83,7 +83,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="#80000000" />
+        app:tint="#80000000"
+        android:clickable="true"
+        android:onClick="IrFeedPublicacao"/>
 
     <ImageView
         android:id="@+id/imageView29"
@@ -96,7 +98,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964"
-        app:tint="#80000000" />
+        app:tint="#80000000"
+        android:clickable="true"
+        android:onClick="IrPublicacao"/>
 
     <ImageView
         android:id="@+id/imageView30"
@@ -147,8 +151,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Beiçola"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -179,16 +185,24 @@
         android:layout_width="86dp"
         android:layout_height="36dp"
         android:text="carbonara"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="473dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.719" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Beiçola"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="527dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
 
     <ImageView
         android:id="@+id/imageView14"
