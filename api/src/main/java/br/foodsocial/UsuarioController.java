@@ -1,12 +1,16 @@
 package br.foodsocial;
 
+import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
 
 @RestController
 public class UsuarioController {
+
     @Autowired
     private UsuarioService service;
 
@@ -22,6 +26,34 @@ public class UsuarioController {
         username = formularioLogin.getUsername();
         senha = formularioLogin.getSenha();
 
-        return service.fazLogin(username,senha);
+        return service.fazLogin(username,senha) ;
+    }
+
+
+    @PostMapping("/usuario")
+    public void cadastrarUsuario(@RequestBody Usuario usuario ){
+        service.cadastrarUsuario(usuario);
+    }
+
+
+
+    // atualizar
+    @PutMapping("/usuario/{id}")
+    public ResponseEntity<?> atualizarUsuario(@RequestBody Usuario usuario, @PathVariable Integer id){
+
+        // vou checar se o aluno existe
+        Usuario existente = service.obterUsuario(id);
+
+
+        //se for diferente de nulo, eh pq existe, retornou né, zé
+        if(existente != null)
+        {
+            service.salvar(usuario);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
     }
 }

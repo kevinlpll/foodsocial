@@ -15,7 +15,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
                     "   [DESCRICAO_PERFIL] " +
                     "FROM [dbo].[USUARIO] A " +
                     "WHERE " +
-                    "   [USERNAME] = :username AND " +
-                    "   PWDCOMPARE(:senha,[SENHA]) = 1")
-    Usuario fazLogin(@Param("username") String username,@Param("senha") String senha);
+                    "   [USERNAME] = ?1" +
+                    "   AND [SENHA] = ?2 ")
+    Usuario fazLogin(String username,String senha);
 }
