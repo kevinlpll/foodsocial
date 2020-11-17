@@ -86,3 +86,7 @@ lint/tmp/
 
 #IDE
 .idea/
+
+
+#TARGET
+api/target/
