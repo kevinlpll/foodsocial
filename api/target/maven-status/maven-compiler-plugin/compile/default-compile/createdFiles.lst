@@ -7,5 +7,4 @@ br\foodsocial\Application.class
 br\foodsocial\UsuarioController.class
 br\foodsocial\UsuarioService.class
 br\foodsocial\CategoriaService.class
-br\foodsocial\FormularioCadastroUsuario.class
 br\foodsocial\FormularioLogin.class

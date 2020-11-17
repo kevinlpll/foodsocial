@@ -11,12 +11,8 @@ public class Usuario {
     @Column(name="ID_USUARIO")
     private int idUsuario;
 
-
-
     @Column(name="NOME")
     private String primeiroNome;
-
-
 
     @Column(name="SOBRENOME")
     private String sobrenome;
@@ -29,7 +25,6 @@ public class Usuario {
 
     @Column(name="SENHA")
     private String senha;
-
 
     public int getIdUsuario() {
         return idUsuario;
@@ -47,9 +42,6 @@ public class Usuario {
         this.primeiroNome = primeiroNome;
     }
 
-    public String getSenha() {
-        return senha;
-    }
 
     public void setSenha(String senha) {
         this.senha = senha;

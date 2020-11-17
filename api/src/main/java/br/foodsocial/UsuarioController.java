@@ -41,11 +41,9 @@ public class UsuarioController {
     @PutMapping("/usuario/{id}")
     public ResponseEntity<?> atualizarUsuario(@RequestBody Usuario usuario, @PathVariable Integer id){
 
-        // vou checar se o aluno existe
         Usuario existente = service.obterUsuario(id);
 
 
-        //se for diferente de nulo, eh pq existe, retornou né, zé
         if(existente != null)
         {
             service.salvar(usuario);
