@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 
 
@@ -24,5 +25,7 @@ public class TelaPerfil extends AppCompatActivity {
         Intent intent = new Intent(this,TelaPublicacao.class);
         startActivity(intent);
     }
+
+
 
 }

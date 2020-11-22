@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Foodsocial">
+    tools:context=".TelaCadastro">
 
 
     <EditText
@@ -93,18 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/senha" />
 
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="336dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:background="#5069EB "
-        android:text="Cadastrar"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmar_senha" />
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -137,28 +126,41 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Já possui conta?"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="132dp"
-        android:text="Faça login"
-        android:textColor="#5069EB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        app:layout_constraintVertical_bias="0.105"
+        android:layout_marginEnd="116dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="irLogin"
+        android:text="Faça login"
+        android:textColor="#5069EB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="336dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="#5069EB "
+        android:text="Cadastrar"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar_senha"
+        android:clickable="true"
+        android:onClick="onClickCadastrar"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

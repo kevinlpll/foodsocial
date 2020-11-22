@@ -1,4 +1,4 @@
-package com.uniso.lpdm.foodsocial;
+package com.uniso.lpdm.foodsocial.services.login;
 
 
 import retrofit2.Call;
@@ -11,5 +11,5 @@ public interface LoginService {
         "Content-Type: application/json"
     })
     @POST("login")
-    Call<Usuario> fazLogin(@Body FormularioLogin formularioLogin);
+    Call<UsuarioLogin> fazLogin(@Body FormularioLogin formularioLogin);
 }

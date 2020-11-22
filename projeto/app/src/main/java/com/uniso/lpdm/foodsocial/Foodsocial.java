@@ -21,6 +21,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.uniso.lpdm.foodsocial.services.login.FormularioLogin;
+import com.uniso.lpdm.foodsocial.services.RetrofitConfig;
+import com.uniso.lpdm.foodsocial.services.login.UsuarioLogin;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -45,32 +49,36 @@ public class Foodsocial extends AppCompatActivity {
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
 
-                //Intent intent = new Intent();
+
                 FormularioLogin formularioLogin = new FormularioLogin(username.getText().toString(),senha.getText().toString());
-                Call<Usuario> call = new RetrofitConfig().postLoginService().fazLogin(formularioLogin);
+                Call<UsuarioLogin> call = new RetrofitConfig().postLoginService().fazLogin(formularioLogin);
+                final Intent intent = new Intent(v.getContext(),TelaFeedPublicacao.class);
 
-                call.enqueue(new Callback<Usuario>() {
+                call.enqueue(new Callback<UsuarioLogin>() {
                     @Override
-                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                    public void onResponse(Call<UsuarioLogin> call, Response<UsuarioLogin> response) {
 
-                        Usuario usuario = response.body();
 
-                        Toast toast = Toast.makeText(context,"Usuário autenticado com sucesso",duration);
-                        toast.show();
-//                        if(response != null){
-//                            Log.d("Login ","Autenticado com sucesso!");
-//                        }else{
-//                            Log.d("Login ","Usuario e/ou senha invalidos");
-//                        }
+                        UsuarioLogin usuarioLogin = new UsuarioLogin(
+                                response.body().getIdUsuario(),
+                                response.body().getPrimeiroNome(),
+                                response.body().getSobrenome(),
+                                response.body().getNomeUsuario(),
+                                response.body().getDescricaoPerfil()
+                                );
 
+                        Log.d("respostaJackson",usuarioLogin.getPrimeiroNome());
+
+                        v.getContext().startActivity(intent);
                     }
 
                     @Override
-                    public void onFailure(Call<Usuario> call, Throwable t) {
+                    public void onFailure(Call<UsuarioLogin> call, Throwable t) {
                         Toast toast = Toast.makeText(context,"Usuário e/ou senha incorretos",duration);
                         toast.show();
+                        Log.e("Resposta Login",t.getMessage());
                     }
                 });
             }

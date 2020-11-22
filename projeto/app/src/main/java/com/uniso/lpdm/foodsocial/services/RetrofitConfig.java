@@ -1,4 +1,7 @@
-package com.uniso.lpdm.foodsocial;
+package com.uniso.lpdm.foodsocial.services;
+
+import com.uniso.lpdm.foodsocial.services.cadastro.CadastroService;
+import com.uniso.lpdm.foodsocial.services.login.LoginService;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -15,5 +18,10 @@ public class RetrofitConfig {
 
     public LoginService postLoginService (){
         return this.retrofit.create(LoginService.class);
+    }
+
+    public CadastroService postCadastroService(){
+        return this.retrofit.create(CadastroService.class);
+
     }
 }

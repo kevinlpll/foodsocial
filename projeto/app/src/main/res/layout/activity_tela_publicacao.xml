@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaPerfil">
+    tools:context=".TelaPublicacao">
 
     <ImageView
         android:id="@+id/imageView16"
@@ -174,7 +174,7 @@
         app:tint="#80000000" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/abrir_camera"
         android:layout_width="48dp"
         android:layout_height="49dp"
         android:src="@drawable/camera_plus_icon_138819"
@@ -183,7 +183,10 @@
         app:layout_constraintHorizontal_bias="0.366"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#80000000"/>
+        app:tint="#80000000"
+        android:clickable="true"
+        android:onClick="abrirCamera"
+        />
 
     <ImageView
         android:id="@+id/imageView10"

@@ -1,5 +1,9 @@
 package com.uniso.lpdm.foodsocial;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"descricaoPerfil"})
 public class Usuario {
 
     //propriedades
@@ -8,10 +12,32 @@ public class Usuario {
     private String sobrenome;
     private String nomeUsuario;
     private String descricaoPerfil;
+    private String senha;
 
+    public Usuario(String primeiroNome,String sobrenome,String nomeUsuario,String senha){
+        this.setPrimeiroNome(primeiroNome);
+        this.setSobrenome(sobrenome);
+        this.setNomeUsuario(nomeUsuario);
+        this.setSenha(senha);
+    }
+
+    public Usuario(int idUsuario,String primeiroNome,String sobrenome,String nomeUsuario){
+        this.setPrimeiroNome(primeiroNome);
+        this.setSobrenome(sobrenome);
+        this.setNomeUsuario(nomeUsuario);
+        this.setIdUsuario(idUsuario);
+    }
 
 
     //getters e setters
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }

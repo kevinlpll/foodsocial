@@ -1,4 +1,4 @@
-package com.uniso.lpdm.foodsocial;
+package com.uniso.lpdm.foodsocial.services.login;
 
 public class FormularioLogin {
 
