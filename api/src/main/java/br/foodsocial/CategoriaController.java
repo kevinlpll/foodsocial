@@ -15,5 +15,4 @@ public class CategoriaController {
     public List<Categoria> obterCategorias(){
         return service.obterCategorias();
     }
-
 }
