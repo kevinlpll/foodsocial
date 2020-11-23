@@ -22,6 +22,7 @@
         <activity android:name=".TelaFeedPublicacao"></activity>
         <activity android:name=".TelaPerfil"></activity>
         <activity android:name=".TelaPublicacao"></activity>
+        <activity android:name=".TelaFavorito"></activity>
         <activity android:name="com.uniso.lpdm.foodsocial.Foodsocial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

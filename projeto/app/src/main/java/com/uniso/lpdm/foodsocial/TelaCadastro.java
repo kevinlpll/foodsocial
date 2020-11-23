@@ -61,13 +61,14 @@ public class TelaCadastro extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickCadastrar(View View){
-        final Context context = getApplicationContext();
+    public void onClickCadastrar(View view){
+        final Context context = view.getContext();
         final Intent intent = new Intent(context,Foodsocial.class);
 
+        Log.d("EditSenhaVazio",String.valueOf(editSenha.getText().equals("")));
 
         Log.d("confirmarSenha",String.valueOf(editConfirmarSenha.getText().toString().equals(editSenha.getText().toString())));
-        if(editConfirmarSenha.getText().toString().equals(editSenha.getText().toString())){
+        if(editConfirmarSenha.getText().toString().equals(editSenha.getText().toString()) && !editSenha.getText().equals("")){
             Usuario usuario = new Usuario(
                     editNome.getText().toString(),
                     editSobrenome.getText().toString(),
@@ -77,18 +78,20 @@ public class TelaCadastro extends AppCompatActivity {
             );
 
 
+
+
             Call<ResponseBody> call = new RetrofitConfig().postCadastroService().criaUsuario(usuario);
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                    Log.d("response",response.message());
 
-                    Log.d("response",String.valueOf(response.isSuccessful()));
+
                     if(response.code() == 200){
                         context.startActivity(intent);
                     }else if(response.code() == 409) {
                         Toast toast = Toast.makeText(context, "Nome de usuário já utilizado", Toast.LENGTH_SHORT);
                         toast.show();
+
                     }
                 }
 
@@ -97,6 +100,15 @@ public class TelaCadastro extends AppCompatActivity {
                     Log.e("Faio",t.getMessage());
                 }
             });
+        }else if (
+            editSenha.getText().equals("") ||
+            editConfirmarSenha.getText().equals("") ||
+            editUsername.getText().equals("") ||
+            editNome.getText().equals("") ||
+            editSobrenome.getText().equals("")
+        ){
+            Toast toast = Toast.makeText(context, "Preencha todos os campos!", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 

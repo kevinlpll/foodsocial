@@ -6,45 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".TelaPublicacao">
 
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="48dp"
-        android:layout_height="49dp"
-        android:src="@drawable/transferir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        app:tint="#80000000" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="255dp"
         android:layout_height="40dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/revalia"
         android:text="@string/foodsocial"
         android:textColor="#80000000"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="107dp"
         android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logofs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
         app:tint="#80000000" />
 
     <EditText
@@ -106,71 +88,53 @@
         app:layout_constraintVertical_bias="0.762" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/Favoritos"
         android:layout_width="48dp"
         android:layout_height="49dp"
-        android:layout_marginLeft="268px"
-        android:src="@drawable/kisspng_peco_pallet_computer_icons_magnifying_glass_5adc26b807be91_5783168115243772720317"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964"
-        app:tint="#80000000" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="48dp"
-        android:layout_height="49dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="IrPublicacao"
         android:src="@drawable/pinclipart_com_broken_glass_clipart_1439670"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toEndOf="@+id/Publicar"
         app:tint="#80000000" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/Home"
         android:layout_width="48dp"
         android:layout_height="49dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="IrFeedPublicacao"
         android:src="@drawable/clipart41237"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="#80000000"
-        android:clickable="true"
-        android:onClick="IrFeedPublicacao"/>
+        app:tint="#80000000" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/Perfils"
         android:layout_width="48dp"
         android:layout_height="49dp"
+        android:layout_marginStart="56dp"
+        android:clickable="true"
+        android:onClick="IrPerfil"
         android:src="@drawable/user"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964"
-        app:tint="#80000000"
-        android:clickable="true"
-        android:onClick="IrPerfil"/>
+        app:layout_constraintStart_toEndOf="@+id/Home"
+        app:layout_constraintTop_toTopOf="@+id/Home"
+        app:tint="#80000000" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/Publicar"
         android:layout_width="48dp"
         android:layout_height="49dp"
+        android:layout_marginStart="56dp"
         android:src="@drawable/aaaaaaddd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964"
+        app:layout_constraintStart_toEndOf="@+id/Perfils"
+        app:layout_constraintTop_toTopOf="@+id/Perfils"
         app:tint="#80000000" />
 
     <ImageView
@@ -186,7 +150,8 @@
         app:tint="#80000000"
         android:clickable="true"
         android:onClick="abrirCamera"
-        />
+    />
+
 
     <ImageView
         android:id="@+id/imageView10"

@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaFeedPublicacao">
+    tools:context=".TelaFavorito">
+
+    <TextView
+        android:id="@+id/NameLogo"
+        android:layout_width="255dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/revalia"
+        android:text="@string/foodsocial"
+        android:textColor="#80000000"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo" />
 
     <ImageView
         android:id="@+id/Favoritos"
@@ -12,66 +24,52 @@
         android:layout_height="49dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="24dp"
-        android:clickable="true"
-        android:onClick="IrFavoritos"
         android:src="@drawable/pinclipart_com_broken_glass_clipart_1439670"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toEndOf="@+id/Publicar"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toEndOf="@+id/Perfil"
         app:tint="#80000000" />
 
     <ImageView
         android:id="@+id/Home"
         android:layout_width="48dp"
         android:layout_height="49dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="IrFeedPublicacao"
         android:src="@drawable/clipart41237"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:tint="#80000000" />
 
-
     <ImageView
-        android:id="@+id/Publicar"
+        android:id="@+id/feedpublicao"
         android:layout_width="48dp"
         android:layout_height="49dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="60dp"
         android:clickable="true"
         android:onClick="IrPublicacao"
-        android:src="@drawable/aaaaaaddd"
-        app:layout_constraintStart_toEndOf="@+id/Perfil"
-        app:layout_constraintTop_toTopOf="@+id/Perfil"
+        android:src="@drawable/user"
+        app:layout_constraintStart_toEndOf="@+id/Home"
+        app:layout_constraintTop_toTopOf="@+id/Home"
         app:tint="#80000000" />
 
     <ImageView
         android:id="@+id/Perfil"
         android:layout_width="48dp"
         android:layout_height="49dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="56dp"
         android:clickable="true"
         android:onClick="IrPerfil"
-        android:src="@drawable/user"
-        app:layout_constraintStart_toEndOf="@+id/Home"
-        app:layout_constraintTop_toTopOf="@+id/Home"
+        android:src="@drawable/aaaaaaddd"
+        app:layout_constraintStart_toEndOf="@+id/feedpublicao"
+        app:layout_constraintTop_toTopOf="@+id/feedpublicao"
         app:tint="#80000000" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="255dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="44dp"
-        android:fontFamily="@font/revalia"
-        android:text="@string/app_name"
-        android:textColor="#80000000"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView17"
-        app:layout_constraintTop_toTopOf="@+id/imageView17" />
-
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/Logo"
         android:layout_width="107dp"
         android:layout_height="96dp"
         android:layout_marginStart="16dp"
@@ -80,5 +78,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="#80000000" />
+
+    <TextView
+        android:id="@+id/FavoritosTxt"
+        android:layout_width="142dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/revalia"
+        android:text="FAVORITOS"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
