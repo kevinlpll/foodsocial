@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/user_Image"
+        android:layout_width="70dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/images" />
+
+    <TextView
+        android:id="@+id/Titulo_publicacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:shadowColor="#2C2525"
+        android:text="Pizza Napolitana"
+        android:textColor="#4C4040"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/user_Image"
+        app:layout_constraintTop_toTopOf="@+id/user_Image" />
+
+    <TextView
+        android:id="@+id/nome_User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Kevin Lopes Pascoa"
+        app:layout_constraintBottom_toBottomOf="@+id/user_Image"
+        app:layout_constraintStart_toEndOf="@+id/user_Image" />
+
+    <ImageView
+        android:id="@+id/FotoPublicao"
+        android:layout_width="372dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/likeButton"
+        android:layout_width="65dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="396dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logofs"
+        app:tint="#AEAEAE" />
+
+    <ImageView
+        android:id="@+id/FavotitoButton"
+        android:layout_width="43dp"
+        android:layout_height="47dp"
+        app:layout_constraintStart_toEndOf="@+id/likeButton"
+        app:layout_constraintTop_toTopOf="@+id/likeButton"
+        app:srcCompat="@drawable/pinclipart_com_broken_glass_clipart_1439670"
+        app:tint="#AEAEAE" />
+
+    <Button
+        android:id="@+id/Descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:text="@string/Descricao"
+        app:layout_constraintStart_toEndOf="@+id/FavotitoButton"
+        app:layout_constraintTop_toTopOf="@+id/FavotitoButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
