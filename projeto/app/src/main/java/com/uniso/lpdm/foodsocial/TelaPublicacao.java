@@ -38,6 +38,7 @@ public class TelaPublicacao extends AppCompatActivity {
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
+        
     }
 
     public void abrirCamera(View view){
