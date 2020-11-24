@@ -14,7 +14,6 @@ public class UsuarioController {
     @Autowired
     private UsuarioService service;
 
-
     @GetMapping("/usuario/{idUsuario}")
     public Usuario obterUsuario(@PathVariable Integer idUsuario){
         return service.obterUsuario(idUsuario);
@@ -42,8 +41,6 @@ public class UsuarioController {
     public ResponseEntity<?> atualizarUsuario(@RequestBody Usuario usuario, @PathVariable Integer id){
 
         Usuario existente = service.obterUsuario(id);
-
-
         if(existente != null)
         {
             service.salvar(usuario);

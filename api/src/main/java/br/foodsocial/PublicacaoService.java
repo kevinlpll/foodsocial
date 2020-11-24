@@ -14,4 +14,6 @@ public class PublicacaoService {
     public List<Publicacao> obterPublicacoes(){
         return publicacaoRepository.findAll(Sort.by(Sort.Direction.DESC,"idPublicacao"));
     }
+
+    public void cadastrarPublicacao(Publicacao publicacao){publicacaoRepository.save(publicacao); }
 }
